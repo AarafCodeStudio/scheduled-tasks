@@ -12,7 +12,7 @@ MY_PASSWORD = os.environ.get("MY_PASSWORD")
 today = datetime.now()
 today_tuple = (today.month, today.day)
 
-data = pandas.read_csv(r"C:\Users\wazie\OneDrive\Desktop\UDEMY\birthday-wisher-extrahard-start\birthday.csv")
+data = pandas.read_csv("birthday.csv")
 birthdays_dict = {(data_row['month'], data_row["day"]): data_row for (index, data_row) in data.iterrows()}
 if today_tuple in birthdays_dict:
     birthday_person = birthdays_dict[today_tuple]
